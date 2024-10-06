@@ -1,5 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+#Ignore node_modules
+/node_modules
+#Ignore build output
+.next/
+#Ignore log files
+*.log
 # dependencies
 /node_modules
 /.pnp

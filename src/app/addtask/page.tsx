@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
-import Menu from './components/Menu';
-import IconBar from './components/IconBar';
-import TaskList from './components/TaskList';
+import Menu from '../components/Menu';
+import IconBar from '../components/IconBar';
+import TaskManager from '../components/TaskManager';
 
 const page = () => {
    
@@ -15,7 +15,7 @@ const page = () => {
                 <div className="px-6 pt-6 2xl:container">
                     <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">
                   
-                      <TaskList/>
+                      <TaskManager/>
                     </div>
                 </div>
             </div>

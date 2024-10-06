@@ -1,11 +1,9 @@
-"use client"
-import React from 'react';
-import Menu from './components/Menu';
-import IconBar from './components/IconBar';
-import TaskList from './components/TaskList';
+import React from 'react'
+import Menu from '../components/Menu';
+import IconBar from '../components/IconBar';
+import GanttChartPage from '../components/GanttChartPage';
 
-const page = () => {
-   
+const calendar = () => {
   return (
     <>
         <Menu/>
@@ -14,13 +12,12 @@ const page = () => {
 
                 <div className="px-6 pt-6 2xl:container">
                     <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">
-                  
-                      <TaskList/>
+                        <GanttChartPage/>
                     </div>
                 </div>
             </div>
-    </>                 
-  );
+    </>
+  )
 }
 
-export default page;
+export default calendar;
