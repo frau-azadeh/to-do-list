@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
 
 ### Clone the repository
 
-git clone https://github.com/frau-azadeh/kadec.git
+git clone https://github.com/frau-azadeh/to-do-list.git
 cd kadec
 
 ### Install dependencies
