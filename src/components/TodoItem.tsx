@@ -1,7 +1,10 @@
 "use client";
+
 import React, { useState } from "react";
-import { List, Checkbox, Button, Input, Space, Row, Col } from "antd";
+
 import { DeleteOutlined, EditOutlined, SaveOutlined } from "@ant-design/icons";
+import { Button, Checkbox, Col, Input, List, Row, Space } from "antd";
+
 import { useTodos } from "@/context/TodoContext";
 
 interface TodoItemProps {
@@ -46,7 +49,12 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, text, completed }) => {
           marginBottom: "10px",
         }}
       >
-        <Col xs={24} sm={18} md={18} style={{ display: "flex", alignItems: "center" }}>
+        <Col
+          xs={24}
+          sm={18}
+          md={18}
+          style={{ display: "flex", alignItems: "center" }}
+        >
           <Checkbox
             checked={completed}
             onChange={toggleTodo}

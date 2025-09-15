@@ -1,25 +1,32 @@
 "use client";
+
 import React, {
-  createContext,
-  useReducer,
-  useContext,
   ReactNode,
+  createContext,
+  useContext,
   useEffect,
+  useReducer,
 } from "react";
 
 interface Todo {
   id: string;
   text: string;
   completed: boolean;
-  priority: "low" | "medium" | "high"; 
+  priority: "low" | "medium" | "high";
 }
 
 type Action =
-  | { type: "ADD_TODO"; payload: { text: string; priority: "low" | "medium" | "high" } }
+  | {
+      type: "ADD_TODO";
+      payload: { text: string; priority: "low" | "medium" | "high" };
+    }
   | { type: "DELETE_TODO"; payload: { id: string } }
   | { type: "TOGGLE_TODO"; payload: { id: string } }
   | { type: "EDIT_TODO"; payload: { id: string; text: string } }
-  | { type: "EDIT_PRIORITY"; payload: { id: string; priority: "low" | "medium" | "high" } }
+  | {
+      type: "EDIT_PRIORITY";
+      payload: { id: string; priority: "low" | "medium" | "high" };
+    }
   | { type: "REORDER_TODOS"; payload: { todos: Todo[] } }
   | { type: "SET_TODOS"; payload: Todo[] };
 
@@ -62,7 +69,7 @@ const todoReducer = (state: State, action: Action): State => {
         todos: state.todos.map((todo) =>
           todo.id === action.payload.id
             ? { ...todo, completed: !todo.completed }
-            : todo
+            : todo,
         ),
       };
     case "EDIT_TODO":
@@ -71,7 +78,7 @@ const todoReducer = (state: State, action: Action): State => {
         todos: state.todos.map((todo) =>
           todo.id === action.payload.id
             ? { ...todo, text: action.payload.text }
-            : todo
+            : todo,
         ),
       };
     case "EDIT_PRIORITY":
@@ -80,7 +87,7 @@ const todoReducer = (state: State, action: Action): State => {
         todos: state.todos.map((todo) =>
           todo.id === action.payload.id
             ? { ...todo, priority: action.payload.priority }
-            : todo
+            : todo,
         ),
       };
     case "REORDER_TODOS":

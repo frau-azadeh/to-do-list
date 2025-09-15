@@ -1,11 +1,15 @@
 "use client";
+
 import React, { useState } from "react";
+
 import { Layout } from "antd";
+
+import FilterButtons from "@/components/FilterButtons";
+import TaskProgress from "@/components/TaskProgress";
 import TodoForm from "@/components/TodoForm";
 import TodoList from "@/components/TodoList";
-import FilterButtons from "@/components/FilterButtons";
+
 import { useTodos } from "../context/TodoContext";
-import TaskProgress from "@/components/TaskProgress";
 
 const { Header, Content, Footer } = Layout;
 

@@ -20,7 +20,7 @@ A modern and user-friendly To-Do List application built with **Next.js**, **Type
 
 Check out the live demo:
 
-[To-Do List App Live Demo]((https://to-do-list-six-lilac.vercel.app/))
+[To-Do List App Live Demo](<(https://to-do-list-six-lilac.vercel.app/)>)
 
 ---
 
