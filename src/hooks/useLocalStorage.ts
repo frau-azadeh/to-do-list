@@ -1,4 +1,5 @@
-'use client'
+"use client";
+
 import { useState } from "react";
 
 function useLocalStorage<T>(key: string, initialValue: T) {

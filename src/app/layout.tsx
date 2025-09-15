@@ -1,8 +1,11 @@
+import { ConfigProvider } from "antd";
 import type { Metadata } from "next";
-import { ConfigProvider } from "antd"; // برای مدیریت تم
-import "./globals.css";
-import "../styles/fonts.css";
+
 import { TodoProvider } from "@/context/TodoContext";
+
+import "../styles/fonts.css";
+// برای مدیریت تم
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "To Do List",
@@ -18,12 +21,12 @@ export default function RootLayout({
     <html lang="fa" dir="rtl">
       <body>
         <ConfigProvider
-          direction="rtl" 
+          direction="rtl"
           theme={{
             token: {
-              fontFamily: "Vazir, sans-serif", 
-              colorPrimary: "#f4f4f5", 
-              borderRadius: 6, 
+              fontFamily: "Vazir, sans-serif",
+              colorPrimary: "#f4f4f5",
+              borderRadius: 6,
             },
           }}
         >

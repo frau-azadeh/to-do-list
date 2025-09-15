@@ -1,6 +1,9 @@
 "use client";
+
 import React from "react";
-import { Form, Input, Button, Select, Row, Col } from "antd";
+
+import { Button, Col, Form, Input, Row, Select } from "antd";
+
 import { useTodos } from "@/context/TodoContext";
 
 const { Option } = Select;
@@ -9,8 +12,14 @@ const TodoForm: React.FC = () => {
   const [form] = Form.useForm();
   const { dispatch } = useTodos();
 
-  const onFinish = (values: { task: string; priority: "low" | "medium" | "high" }) => {
-    dispatch({ type: "ADD_TODO", payload: { text: values.task, priority: values.priority } });
+  const onFinish = (values: {
+    task: string;
+    priority: "low" | "medium" | "high";
+  }) => {
+    dispatch({
+      type: "ADD_TODO",
+      payload: { text: values.task, priority: values.priority },
+    });
     form.resetFields();
   };
 
@@ -34,7 +43,9 @@ const TodoForm: React.FC = () => {
         <Col xs={24} sm={12} md={8}>
           <Form.Item
             name="priority"
-            rules={[{ required: true, message: "لطفاً اولویت را انتخاب کنید!" }]}
+            rules={[
+              { required: true, message: "لطفاً اولویت را انتخاب کنید!" },
+            ]}
           >
             <Select placeholder="اولویت">
               <Option value="low">کم</Option>

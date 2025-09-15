@@ -1,8 +1,11 @@
 import React from "react";
-import { Button, Row, Col, Typography } from "antd";
+
+import { Button, Col, Row, Typography } from "antd";
 
 interface FilterButtonsProps {
-  setFilter: React.Dispatch<React.SetStateAction<"all" | "completed" | "pending">>;
+  setFilter: React.Dispatch<
+    React.SetStateAction<"all" | "completed" | "pending">
+  >;
   filter: "all" | "completed" | "pending";
   remainingTasks: number;
 }
@@ -16,7 +19,10 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
 
   return (
     <div style={{ margin: "20px 0" }}>
-      <Text strong style={{ display: "block", textAlign: "center", marginBottom: "16px" }}>
+      <Text
+        strong
+        style={{ display: "block", textAlign: "center", marginBottom: "16px" }}
+      >
         تعداد وظایف باقی‌مانده: {remainingTasks}
       </Text>
       <Row gutter={[4, 4]} justify="center">
@@ -39,7 +45,8 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
             type="default"
             block
             style={{
-              backgroundColor: filter === "completed" ? "#059669" : "transparent",
+              backgroundColor:
+                filter === "completed" ? "#059669" : "transparent",
               color: filter === "completed" ? "#FFFFFF" : "#000",
               borderColor: filter === "completed" ? "#00FF00" : "#d9d9d9",
             }}

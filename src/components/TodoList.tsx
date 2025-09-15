@@ -1,7 +1,10 @@
 "use client";
+
 import React, { useState } from "react";
-import { List, Checkbox, Button, Input, Space, Tag } from "antd";
+
 import { DeleteOutlined, EditOutlined, SaveOutlined } from "@ant-design/icons";
+import { Button, Checkbox, Input, List, Space, Tag } from "antd";
+
 import { useTodos } from "@/context/TodoContext";
 
 interface TodoListProps {
@@ -51,7 +54,10 @@ const TodoList: React.FC<TodoListProps> = ({ filter }) => {
       alert("متن نمی‌تواند خالی باشد.");
       return;
     }
-    dispatch({ type: "EDIT_TODO", payload: { id: editingId!, text: editText } });
+    dispatch({
+      type: "EDIT_TODO",
+      payload: { id: editingId!, text: editText },
+    });
     setEditingId(null);
     setEditText("");
   };
@@ -136,8 +142,8 @@ const TodoList: React.FC<TodoListProps> = ({ filter }) => {
                     {todo.priority === "low"
                       ? "کم"
                       : todo.priority === "medium"
-                      ? "متوسط"
-                      : "زیاد"}
+                        ? "متوسط"
+                        : "زیاد"}
                   </Tag>
                 </span>
               )}

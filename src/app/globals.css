@@ -9,14 +9,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #0000FF; 
-    --text-color: #666666; 
-    --background-color: #fed7aa; 
-    --success-color: #4caf50; 
-    --error-color: #f44336; 
+    --primary-color: #0000ff;
+    --text-color: #666666;
+    --background-color: #fed7aa;
+    --success-color: #4caf50;
+    --error-color: #f44336;
   }
 }
-
-
-
-
