@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "antd": "^5.22.7",
     "dayjs": "^1.11.13",
     "dayjs-jalali": "^0.0.2",
